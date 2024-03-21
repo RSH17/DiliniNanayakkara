@@ -12,7 +12,7 @@ info:
   contact:
     email: info@xapihub.io
   license:
-    name: Apache 2.0
+    name: Apache 2.1
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   version: 1.0.1
 components:
