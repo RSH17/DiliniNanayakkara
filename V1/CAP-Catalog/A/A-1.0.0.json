@@ -75,28 +75,34 @@ paths:
           application/json:
             schema:
               type: object
+              required:
+                - menuId
+                - itemId
+                - rating
               allOf:
                 - type: object
-                  required:
-                    - name
                   properties:
-                    name:
+                    menuId:
                       type: string
-                      example: today special
-                    description:
+                      format: uuid
+                      description: Menu Id
+                      example: da8249e2-49ab-4060-bb5e-ca7c66f279ac
+                    itemId:
                       type: string
-                      example: Sample menu
-                    isAvailable:
-                      type: boolean
-                      example: true
+                      format: uuid
+                      description: Item ID
+                      example: e2b0a51e-262e-11ee-be56-0242ac120002
                 - type: object
                   properties:
-                    items:
-                      type: array
-                      items:
-                        type: string
-                        format: uuid
-                        example: e2b0a51e-262e-11ee-be56-0242ac120002
+                    rating:
+                      type: integer
+                      format: int32
+                      description: Rating for an item 0 - 5
+                      example: " 4"
+                    comments:
+                      type: string
+                      description: User can give a comments
+                      example: Delicious food item
           application/xml:
             schema:
               type: object
