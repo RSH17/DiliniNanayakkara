@@ -1,0 +1,85 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenAPI 3.1 Specification for CoffeeShop",
+    "summary": "Sample Coffee Shop Server based on the OpenAPI 3.1 specification.",
+    "termsOfService": "http://xapihub.io/terms/",
+    "contact": {
+      "email": "info@xapihub.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about XApi",
+    "url": "http://xapihub.io"
+  },
+  "servers": [
+    {
+      "url": "https://api-qa.xapihub.io/coffeeshop/v1",
+      "description": "Coffeeshop Server"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "inline": {
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64",
+            "example": "12"
+          },
+          "name": {
+            "type": "string",
+            "format": "UUID",
+            "example": "Inline defining testing"
+          },
+          "itemsNo": {
+            "type": "number",
+            "example": "1"
+          },
+          "allowed": {
+            "type": "boolean",
+            "example": true
+          },
+          "address": {
+            "type": "object",
+            "examples": [
+              "main streat",
+              "No 2"
+            ]
+          },
+          "days": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Monday",
+                "Sunday"
+              ]
+            }
+          }
+        }
+      },
+      "inline-local": {
+        "$ref": "#/components/schemas/inline"
+      },
+      "inline-local-local": {
+        "$ref": "#/components/schemas/inline-local"
+      },
+      "local-remote": {
+        "$ref": "#/components/schemas/remote-inline"
+      },
+      "remote-inline": {
+        "$ref": "https://xapihub.io/models/SHINEEE-Entertainment/ReGrEssiOn-TeStInG-Catalog/Schema-MoDel/REFERENCES/REMOTE-REF/1-0-1/#/components/SCHEMAS/inline"
+      },
+      "remote-local": {
+        "$ref": "https://xapihub.io/models/SHINEEE-Entertainment/ReGrEssiOn-TeStInG-Catalog/Schema-MoDel/REFERENCES/REMOTE-REF/1-0-1/#/components/SCHEMAS/inline-local"
+      },
+      "remote-remote": {}
+    }
+  }
+}
