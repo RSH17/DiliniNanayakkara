@@ -9,12 +9,12 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.3
+  version: 1.0.34
 externalDocs:
   description: Find out more about XApi
   url: http://xadpihub.io
 servers:
-  - url: https://api-qa.xapihub.io/coffeeshop/v1
+  - url: https://api-qa.xadpihub.io/coffeeshop/v1
     description: Coffeeshop Server
 tags:
   - name: menu
